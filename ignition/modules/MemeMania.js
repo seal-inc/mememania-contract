@@ -17,6 +17,11 @@ module.exports = buildModule("MemeMania", (m) => {
     "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913"
   );
 
+  const authorizedSigner = m.getParameter(
+    "authorizedSigner",
+    "0xeed9c97c2881c2e55f1198c0c77d1de782da1e27"
+  );
+
   const memeMania = m.contract("MemeMania", [degen, higher, tybg, usdc]);
 
   return { memeMania };
